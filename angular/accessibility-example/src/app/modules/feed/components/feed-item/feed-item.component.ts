@@ -52,7 +52,7 @@ export class FeedItemComponent implements OnInit {
     this.hostDescribedBy = this.item.describedById;
   }
 
-  @HostListener('focusin', ['$event'])
+  @HostListener('focusin')
   public onFocusWithin(): void {
     this.focuswithin.emit(this.elementRef.nativeElement);
   }
