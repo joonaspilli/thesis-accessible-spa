@@ -18,9 +18,9 @@ function checkProperties<T>(...properties: Array<keyof T>): any {
   });
 }
 
-export const RequiredComponentProperties = <T>(
+export function RequiredComponentProperties<T>(
   ...properties: Array<keyof T>
-): (target: Constructable<T>) => void => {
+): (target: Constructable<T>) => void {
   return (target: Constructable<T>): void => {
     const prototype: AssumedComponentPrototype = target.prototype;
     const ownOnChanges = prototype.ngOnChanges;
@@ -31,4 +31,4 @@ export const RequiredComponentProperties = <T>(
       }
     };
   };
-};
+}
