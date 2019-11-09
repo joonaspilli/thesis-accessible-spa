@@ -1,0 +1,1 @@
+.a11y-vhidden{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}body{margin:0}*{box-sizing:border-box}body.modal-open{width:100vw;height:100vh;position:fixed;overflow:hidden}button{font-size:1rem;min-width:2.75em;min-height:2.75em}body :focus{outline:red solid .5rem;outline-offset:.25rem}
