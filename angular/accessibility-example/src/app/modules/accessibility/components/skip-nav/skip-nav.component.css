@@ -1,0 +1,33 @@
+.skip-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-height: 100vh;
+  background-color: #eee;
+  overflow: auto;
+  z-index: 10000;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 0 1rem #000;
+}
+
+.skip-nav--bottom {
+  top: auto;
+  bottom: 0;
+  border-bottom: 0;
+  border-top: 1px solid #333;
+}
+
+.skip-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.skip-nav__list-item {
+  display: block;
+}
+
+.skip-nav__link {
+  margin: 1rem;
+  display: inline-block;
+}

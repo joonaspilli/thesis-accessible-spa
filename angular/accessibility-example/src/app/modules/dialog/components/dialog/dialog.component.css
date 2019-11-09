@@ -1,0 +1,45 @@
+.dialog {
+  height: 100vh;
+  left: 0;
+  overflow: auto;
+  padding: 0 16px;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.dialog--modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
+}
+
+.dialog__window {
+  background-color: #fff;
+  box-shadow: 0 0 16px #000;
+  margin: 32px auto 2rem;
+  max-height: calc(100vh - 64px);
+  max-width: 40rem;
+  overflow: auto;
+  pointer-events: auto;
+}
+
+.dialog__window--modal {
+  max-height: none;
+}
+
+.dialog__buttons {
+  margin: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dialog__button {
+  margin: 0.5rem;
+}
+
+.dialog__content {
+  padding: 1rem;
+}
+

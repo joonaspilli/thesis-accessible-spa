@@ -1,0 +1,32 @@
+.navigation {
+  background-color: #eee;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list-item {
+  display: block;
+}
+
+.navigation__link {
+  padding: 1rem;
+  display: block;
+}
+
+.navigation__link--active {
+  background: #ddd;
+}
+
+@media (min-width: 56.25rem) {
+  .navigation__list-item {
+    margin-right: 1rem;
+    display: inline-block;
+  }
+
+  .navigation__link {
+    display: inline-block;
+  }
+}

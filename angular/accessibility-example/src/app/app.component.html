@@ -1,0 +1,28 @@
+<app-skip-nav [links]="skipNavLinks"></app-skip-nav>
+<app-dialog [attr.id]="'dialog'"></app-dialog>
+<app-status-announcer></app-status-announcer>
+<header class="header">
+  <h1>Example Application</h1>
+  <h2>A study in creating an accessible single-page application</h2>
+</header>
+<div class="main-navigation">
+  <app-navigation
+    [attr.id]="'nav'"
+    [links]="mainNavLinks"
+    ariaLabel="Main">
+  </app-navigation>
+</div>
+<div class="content">
+  <div class="content__sidebar">
+    <app-footer
+      [attr.id]="'footer'"
+      [links]="footerNavLinks">
+    </app-footer>
+  </div>
+  <div class="content__main">
+    <app-main-content [attr.id]="'main'">
+      <router-outlet></router-outlet>
+    </app-main-content>
+  </div>
+</div>
+<app-skip-nav [links]="skipNavLinks" [bottom]="true"></app-skip-nav>

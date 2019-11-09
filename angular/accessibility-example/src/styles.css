@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/modules/accessibility/styles.css';
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.modal-open {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
+button {
+  font-size: 1rem;
+  min-width: 2.75em; /* 44px */
+  min-height: 2.75em; /* 44px */
+}
+
+body *:focus {
+  outline: 0.5rem solid #f00;
+  outline-offset: 0.25rem;
+}

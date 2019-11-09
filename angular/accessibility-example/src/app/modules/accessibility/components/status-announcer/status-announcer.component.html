@@ -1,0 +1,8 @@
+<p
+  *ngFor="let messageType of messageTypes; index as i; trackBy: msgTrackBy"
+  [attr.role]="statusMessages[messageType]?.isAlert ? 'alert' : 'status'"
+  [attr.aria-live]="messageType"
+  aria-atomic="true"
+  class="a11y-vhidden">
+  {{ statusMessages[messageType]?.message }}
+</p>

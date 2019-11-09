@@ -1,0 +1,20 @@
+<nav
+  *ngIf="links.length"
+  [appVHidden]="true"
+  [ngClass]="{ 'skip-nav--bottom': bottom }"
+  class="skip-nav"
+  aria-label="Skip">
+  <ul class="skip-nav__list">
+    <ng-container *ngFor="let link of displayedLinks; index as i; trackBy: getLinkTrackBy">
+      <li
+        *ngIf="!link.display || (link.display | async)"
+        class="skip-nav__list-item">
+        <a
+          class="skip-nav__link"
+          [attr.href]="linkPrefix + '#' + link.anchorId">
+          {{ link.label }}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

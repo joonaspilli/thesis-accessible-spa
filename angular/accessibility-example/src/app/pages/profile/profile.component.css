@@ -1,0 +1,7 @@
+.button {
+  display: block;
+}
+
+.button ~ .button {
+  margin-top: 1rem;
+}

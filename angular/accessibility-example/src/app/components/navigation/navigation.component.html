@@ -1,0 +1,18 @@
+  <nav
+    *ngIf="links.length"
+    [attr.aria-label]="ariaLabel || null"
+    class="navigation">
+    <ul class="navigation__list">
+      <li *ngFor="let link of links" class="navigation__list-item">
+        <a
+          [routerLink]="link.path"
+          [routerLinkActiveOptions]="routerLinkActiveOpts"
+          #rla="routerLinkActive"
+          [attr.aria-current]="rla.isActive ? 'page' : null"
+          routerLinkActive="navigation__link--active"
+          class="navigation__link">
+          {{ link.label }}
+        </a>
+      </li>
+    </ul>
+  </nav>

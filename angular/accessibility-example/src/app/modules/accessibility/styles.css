@@ -1,0 +1,12 @@
+/**
+ * Visually hidden but still visible to screen readers.
+ * Source: https://webaim.org/techniques/css/invisiblecontent/
+ */
+.a11y-vhidden {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}

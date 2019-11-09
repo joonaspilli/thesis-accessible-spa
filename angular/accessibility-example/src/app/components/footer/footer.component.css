@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.footer {
+  padding: 1rem;
+  background: #eee;
+  border: 1px solid black;
+}
+
+.footer__navigation {
+}
+
+.footer__navigation-list {
+  margin: 0;
+  padding: 0;
+}
+
+.footer__navigation-list-item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer__navigation-link {
+  display: inline-block;
+}

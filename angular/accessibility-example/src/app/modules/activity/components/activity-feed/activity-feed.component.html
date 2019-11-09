@@ -1,0 +1,8 @@
+<app-feed
+  [feedStatus]="feedStatus"
+  [items]="posts"
+  [label]="'Activity Feed'"
+  [messages]="feedMessages"
+  [setSize]="totalPostCount"
+  (scrolled)="getPosts()">
+</app-feed>

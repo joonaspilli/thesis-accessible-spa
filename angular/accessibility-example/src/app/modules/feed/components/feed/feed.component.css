@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.feed {}
+
+.feed__instructions {
+}
+
+.feed__instruction {
+  display: block;
+}

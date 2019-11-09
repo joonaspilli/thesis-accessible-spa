@@ -1,0 +1,28 @@
+<div class="feed">
+  <p [appVHidden]="true" class="feed__instructions" tabindex="0">
+    <b>When inside the feed: </b>
+    <span class="feed__instruction">Use <b>N or J</b> to move to the next item. </span>
+    <span class="feed__instruction">Use <b>P or K</b> to move to the previous item. </span>
+    <span class="feed__instruction">Use <b>L or Shift+J</b> to move to the last item. </span>
+    <span class="feed__instruction">Use <b>F or Shift+K</b> to move to the first item.</span>
+  </p>
+  <div
+    #feedEl
+    [attr.aria-busy]="!items.length || feedStatus.busy"
+    [attr.aria-label]="label || null"
+    [infiniteScrollContainer]="infiniteScrollContainer"
+    [infiniteScrollDisabled]="disableInfiniteScroll"
+    [infiniteScrollDistance]="scrollDistance"
+    infiniteScroll
+    (scrolled)="onScroll()"
+    role="feed">
+    <app-feed-item
+      *ngFor="let item of items; index as i; trackBy: feedItemTrackBy"
+      [setSize]="setSize"
+      [posInSet]="i+1"
+      [item]="item"
+      (focuswithin)="updateFocusedItem($event)">
+    </app-feed-item>
+  </div>
+  <p>{{ currentMessage }}</p>
+</div>

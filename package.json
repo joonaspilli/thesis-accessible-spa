@@ -1,0 +1,15 @@
+{
+  "name": "thesis-spa-accessibility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proxy:ng": "browser-sync start --no-open --ws --proxy 'localhost:4200'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

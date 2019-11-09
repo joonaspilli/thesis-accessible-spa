@@ -1,0 +1,6 @@
+<h3 [attr.id]="item.labelledById">{{ item.heading }}</h3>
+<p [attr.id]="item.describedById">{{ item.content }}</p>
+<button type="button" (click)="openItem()">
+  Open <span class="a11y-vhidden">"{{ item.heading }}"</span>
+</button>
+<hr class="line" aria-hidden="true">

@@ -1,0 +1,43 @@
+<div
+  *ngIf="dialog"
+  [ngClass]="{ 'dialog--modal': (modalOpen$ | async) }"
+  class="dialog">
+  <div
+    #dialogWindowEl
+    [appRestrictFocus]="dialog.isModal"
+    [appRestrictFocusInitial]="false"
+    [attr.role]="dialog.dialogType"
+    [attr.aria-modal]="dialog.isModal || null"
+    [ngClass]="{ 'dialog__window--modal': (modalOpen$ | async) }"
+    id="dialog-window"
+    class="dialog__window"
+    aria-labelledby="dialog-heading"
+    aria-describedby="dialog-message">
+    <div class="dialog__content">
+      <p *ngIf="!dialog.isModal" style="color: red; font-weight: bold;">
+        Non-modal dialogs have only a minimal, incomplete and likely an
+        inaccessible implementation. Used solely for testing purposes.
+      </p>
+      <h1
+        #dialogHeadingEl
+        id="dialog-heading"
+        class="dialog__heading"
+        tabindex="-1">
+        {{ dialog.heading }}
+      </h1>
+      <p id="dialog-message" class="dialog__message">
+        {{ dialog.message }}
+      </p>
+    </div>
+    <div class="dialog__buttons">
+      <button
+        *ngFor="let dialogButton of dialog.buttons"
+        (click)="onClose()"
+        type="button"
+        aria-controls="dialog-window"
+        class="dialog__button">
+        {{ dialogButton.text }}
+      </button>
+    </div>
+  </div>
+</div>
