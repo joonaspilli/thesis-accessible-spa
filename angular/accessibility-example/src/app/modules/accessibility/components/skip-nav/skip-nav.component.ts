@@ -95,7 +95,7 @@ export class SkipNavComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   private updateLinkPrefix(currentPath: string): void {
-    this.linkPrefix = currentPath;
+    this.linkPrefix = currentPath.slice(1);
   }
 
 }
